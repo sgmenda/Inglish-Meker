@@ -52,15 +52,12 @@ function splitWith(textList, delimiter) {
 		}
 		let r = result.pop()
 	}
-	// console.log(result)
 	return result
 }
 
 function handleText(textNode) 
 {
 	var v = textNode.nodeValue;
-	
-	// let res = v.toLowerCase().split(" ")
 	
 	let rlist = splitWith(splitWith(splitWith(splitWith(splitWith(splitWith(splitWith([v], ","), "-"), "'"), "’"), "—"), "."), " ")
 
@@ -69,17 +66,10 @@ function handleText(textNode)
 		if (mapping[i.trim()]){
 			i = mapping[i.trim()]
 		} else {
-			i = i.toUpperCase()
+			// i = i.toUpperCase()
 		}
 		result += i
 	}
 
-	// v = v.replace(/\bThe Cloud\b/g, "My Butt");
-	// v = v.replace(/\bThe cloud\b/g, "My butt");
-	// v = v.replace(/\bthe Cloud\b/g, "my Butt");
-	// v = v.replace(/\bthe cloud\b/g, "my butt");
-	
 	textNode.nodeValue = result;
 }
-
-
