@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Inglish-Meker",
+    "version": "1.0",
+    "description": "Riplesiz inglish tekst wiþ e beter reding.",
+    "content_scripts": 
+    [
+        {
+            "matches": ["*://*/*"],
+            "js": ["content_script.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        "mapping.json"
+    ]
+}
+
